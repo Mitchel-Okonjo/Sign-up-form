@@ -92,6 +92,7 @@ label{
     display: block;
     font-size: 12px;
     font-weight: bold;
+    margin-bottom: 2px;
 
 }
 
@@ -106,7 +107,7 @@ form{
 #left-form, #right-form{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 
 }
 
@@ -163,5 +164,22 @@ button{
 }
 
 input:focus{
-    box-shadow: 3px 2px 5px 1px gray;
+    box-shadow: 1px 2px 5px 1px lightgray;
+    outline: none;
 }
+
+input:invalid:focus{
+    border-color: red;
+}
+
+input:focus:valid{
+    border-color: green;
+}
+
+.error-text{
+    height: 5px;
+    font-size: 13px;
+    color: red;
+    margin-top: 3px;
+}
+
