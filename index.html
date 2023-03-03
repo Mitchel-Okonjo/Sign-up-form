@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up Form</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div id="left-side">
@@ -22,41 +23,48 @@
         </div>
         <div id="section-2">
             <p id="form-text">Let's do this!</p>
-            <form action="">
+            <form id="form">
                 <div id="left-form">
                     <div>
                         <label for="first_name">FIRST NAME</label>
-                        <input type="text" id="first_name" name="first_name" class="invalid">
+                        <input type="text" id="first_name" name="first_name">
+                        <p class="error-text" id="first_name-error"></p>
                     </div>
                     <div>
                         <label for="user_email">EMAIL</label>
                         <input type="email" id="user_email" name="user_email">
+                        <p class="error-text" id="user_email-error"></p>
                     </div>
                     <div>
                         <label for="password">PASSWORD</label>
-                        <input type="password" id="password" name="password">
+                        <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
+                        <p class="error-text" id="password-error"></p>
                     </div>
                 </div>
                 <div id="right-form">
                     <div>
                         <label for="last_name">LAST NAME</label>
                         <input type="text" id="last_name" name="last_name">
+                        <p class="error-text" id="last_name-error"></p>
                     </div>
                     <div>
                         <label for="phone_number">PHONE NUMBER</label>
-                        <input type="number" id="phone_number" name="phone_bumber">
+                        <input type="number" id="phone_number" name="phone_number">
+                        <p class="error-text" id="phone_number-error"></p>
                     </div>
                     <div>
                         <label for="confirm_password">CONFIRM PASSWORD</label>
                         <input type="password" id="confirm_password" name="confirm_password">
+                        <p class="error-text" id="confirm_password-error"></p>
                     </div>
                 </div>
             </form>
         </div>
         <div id="section-3">
-            <button type="submit">Create Account</button>
+            <button type="submit" form="form">Create Account</button>
             <p id="form-footer">Already have an account?<a href="" id="form-link">Log in</a></p>
         </div>
     </div>
 </body>
+<script src="script.js" defer></script>
 </html>
